@@ -1107,14 +1107,14 @@ function viewOverview() {
       // '<div><h3 class="panel-title">Service performance</h3>' +
       // '<div class="panel-sub">Revenue by service · tap a row to open that section</div></div></div>' +
       // '<div class="panel-body tight"><ul class="clist" style="max-height:none">' +
-      svc.map((s, i) => '<li class="crow" data-act="tab" data-tab="' + esc(s.id) + '" tabindex="0" role="button" style="animation-delay:' + (i * 20) + 'ms">' +
-        '<div class="crow-main"><div class="crow-top">' + icon(s.icon, 'svcico') +
-        '<span class="crow-name">' + esc(s.label) + '</span></div>' +
-        '<div class="crow-meta"><span>' + s.count + ' record' + (s.count === 1 ? '' : 's') + '</span>' +
-        '<span>' + money(s.paid) + ' collected</span></div>' +
-        '<div class="bar"><span data-bar="' + clamp((s.total / maxSvc) * 100, 2, 100).toFixed(1) + '"></span></div></div>' +
-        '<div class="crow-right"><div class="amt"><b>' + money(s.total) + '</b>' +
-        '<small>' + (s.total ? Math.round((s.paid / s.total) * 100) : 0) + '% paid</small></div></div></li>').join('') +
+      // svc.map((s, i) => '<li class="crow" data-act="tab" data-tab="' + esc(s.id) + '" tabindex="0" role="button" style="animation-delay:' + (i * 20) + 'ms">' +
+      //   '<div class="crow-main"><div class="crow-top">' + icon(s.icon, 'svcico') +
+      //   '<span class="crow-name">' + esc(s.label) + '</span></div>' +
+      //   '<div class="crow-meta"><span>' + s.count + ' record' + (s.count === 1 ? '' : 's') + '</span>' +
+      //   '<span>' + money(s.paid) + ' collected</span></div>' +
+      //   '<div class="bar"><span data-bar="' + clamp((s.total / maxSvc) * 100, 2, 100).toFixed(1) + '"></span></div></div>' +
+      //   '<div class="crow-right"><div class="amt"><b>' + money(s.total) + '</b>' +
+      //   '<small>' + (s.total ? Math.round((s.paid / s.total) * 100) : 0) + '% paid</small></div></div></li>').join('') +
       '</ul></div></section></div>';
 }
 
